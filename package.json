@@ -1,0 +1,19 @@
+{
+  "name": "metalsmith-code-line-numbers",
+  "version": "1.0.0",
+  "description": "Metalsmith plugin that adds line numbers to code blocks",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paysonwallach/metalsmith-code-line-numbers.git"
+  },
+  "keywords": [
+    "metalsmith"
+  ],
+  "author": "Payson Wallach",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/paysonwallach/metalsmith-code-line-numbers/issues"
+  },
+  "homepage": "https://github.com/paysonwallach/metalsmith-code-line-numbers#readme"
+}
