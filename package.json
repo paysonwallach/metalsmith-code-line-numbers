@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-code-line-numbers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Metalsmith plugin that adds line numbers to code blocks",
   "main": "index.js",
   "repository": {
