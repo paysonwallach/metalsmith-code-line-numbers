@@ -1,4 +1,4 @@
-var TABLE_NAME = "hljs-ln",
+const TABLE_NAME = "hljs-ln",
   LINE_NAME = "hljs-ln-line",
   CODE_BLOCK_NAME = "hljs-ln-code",
   NUMBERS_BLOCK_NAME = "hljs-ln-numbers",
@@ -6,21 +6,26 @@ var TABLE_NAME = "hljs-ln",
   DATA_ATTR_NAME = "data-line-number",
   BREAK_LINE_REGEXP = /\r\n|\r|\n/g;
 
-function lineNumbersBlock(element, options) {
-  if (typeof element !== "object") return;
+module.exports = {
+  lineNumbersBlock: function(element, options) {
+    if (typeof element !== "object") return;
 
-  // define options or set default
-  options = options || {
-    singleLine: false
-  };
+    // define options or set default
+    options = options || {
+      singleLine: false
+    };
 
-  // convert options
-  var firstLineIndex = !!options.singleLine ? 0 : 1;
+    // convert options
+    var firstLineIndex = !!options.singleLine ? 0 : 1;
 
-  duplicateMultilineNodes(element);
+    duplicateMultilineNodes(element);
 
-  element.innerHTML = addLineNumbersBlockFor(element.innerHTML, firstLineIndex);
-}
+    element.innerHTML = addLineNumbersBlockFor(
+      element.innerHTML,
+      firstLineIndex
+    );
+  }
+};
 
 function addLineNumbersBlockFor(inputHtml, firstLineIndex) {
   var lines = getLines(inputHtml);
