@@ -1,8 +1,8 @@
 const domTransform = require("metalsmith-dom-transform");
-const highlightTransform = require("./transform");
+const linNumbersTransform = require("./transform");
 
 module.exports = function(options) {
   return domTransform({
-    transforms: [highlightTransform(options)]
+    transforms: [linNumbersTransform(options)]
   });
 };
