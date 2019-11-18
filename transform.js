@@ -2,7 +2,6 @@ const lineNumbers = require("./line-numbers");
 const defaults = {selector: "pre > code"};
 
 module.exports = function(options) {
-  highlight.configure(options);
   let normalizedOptions = Object.assign({}, defaults, options);
   let {selector} = normalizedOptions;
 
